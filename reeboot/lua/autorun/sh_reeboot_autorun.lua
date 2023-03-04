@@ -149,7 +149,7 @@ if SERVER then
         if operation == "when" then
             local txt
             if timer.Exists("reeboot_timer_before_reboot") and (timer.TimeLeft("reeboot_timer_before_reboot") != nil) then
-                local tleft = timer.TimeLeft(tname)
+                local tleft = timer.TimeLeft("reeboot_timer_before_reboot")
                 local mleft = math.floor((tleft % 3600) / 60)
                 local hleft = math.floor(tleft / 3600)
                 txt = {"The server is restarting in ", color_highlight, hleft, color_white, " hours and ", color_highlight, mleft, color_white, " minutes."}
